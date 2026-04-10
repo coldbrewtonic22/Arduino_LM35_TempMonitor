@@ -1,21 +1,26 @@
-// Khai bao bien toan cuc
-int adcValue;
-float NhietDo;
+// Khai bao bien toan cuc kieu mang (array)
+int adcValues[2]; 
+float nhietDo[2]; 
+char chuoi[30];
 
 void setup() {
   // Khoi tao giao tiep Serial toc do 9600 bps
-  Serial.begin(9600); 
+  Serial.begin(9600);
   delay(100);
 }
 
 void loop() {
-  // Doc gia tri ADC tu chan A0 (1 kenh)
-  adcValue = analogRead(A0);
+  // Doc cam bien 1 (Kenh A0)
+  adcValues[0] = analogRead(A0);
+  nhietDo[0] = (adcValues[0] * 500.0) / 1023.0;
   
-  // Chuyen doi ADC sang nhiet do (Do C)
-  NhietDo = (adcValue * 500.0) / 1023.0; 
+  // Doc cam bien 2 (Kenh A1)
+  adcValues[1] = analogRead(A1);
+  nhietDo[1] = (adcValues[1] * 500.0) / 1023.0;
   
-  // Gui du lieu len Serial Monitor
-  Serial.println(NhietDo, 1); // In ra 1 so sau dau phay
-  delay(1000);
+  // Dong goi du lieu thanh chuoi CSV (NhietDo1,NhietDo2)
+  sprintf(chuoi, "%d,%d\n", (int)nhietDo[0], (int)nhietDo[1]);
+  Serial.print(chuoi);
+  
+  delay(100);
 }
