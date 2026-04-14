@@ -19,7 +19,7 @@ void loop() {
   nhietDo[1] = (adcValues[1] * 500.0) / 1023.0;
   
   // Dong goi du lieu thanh chuoi CSV (NhietDo1,NhietDo2)
-  sprintf(chuoi, "%d,%d\n", (int)nhietDo[0], (int)nhietDo[1]);
+ sprintf(chuoi, "{\"A0\":%d, \"A1\":%d}\n", (int)nhietDo[0], (int)nhietDo[1]);
   Serial.print(chuoi);
   
   delay(100);
