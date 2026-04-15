@@ -36,3 +36,7 @@ Arduino_LM35_TempMonitor/
 * Sinh viên chuyên ngành **Internet of Things (IoT)** - Học viện Công nghệ Bưu chính Viễn thông (PTIT).
 * Vai trò trong dự án: **Tech Lead / Embedded Developer**.
 * Website cá nhân (Portfolio): [https://coldbrewtonic22.github.io/](https://coldbrewtonic22.github.io/)
+**Nguyễn Quốc Thịnh**
+* Sinh viên chuyên ngành **Internet of Things (IoT)** - Học viện Công nghệ Bưu chính Viễn thông (PTIT).
+* Vai trò trong dự án: **Software & System Integration**.
+* Website cá nhân (Portfolio): [https://nguyenthinh06062005-lgtm.github.io/](https://nguyenthinh06062005-lgtm.github.io/)
